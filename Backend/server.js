@@ -16,11 +16,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // create MySQL connector
 const db = mysql.createConnection({
-    host: 'www.onikumo.com',
-    port: '3306',
-    user: 'job',
-    password: 'ETcxCpicYdcpPTKj',
-    database: 'job'
+    host: '',
+    port: '',
+    user: '',
+    password: '',
+    database: ''
 });
 
 // connect mysql
