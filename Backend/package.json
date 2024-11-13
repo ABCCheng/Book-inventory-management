@@ -1,0 +1,17 @@
+{
+    "name": "book-inventory-backend",
+    "version": "1.0.0",
+    "description": "Backend for book inventory management",
+    "main": "server.js",
+    "bin": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.3",
+        "cors": "^2.8.5",
+        "express": "^4.21.1",
+        "mysql2": "^3.11.4",
+        "xlsx": "^0.18.5"
+    }
+}
