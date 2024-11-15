@@ -69,15 +69,18 @@ cd book-inventory-management
    - Modify the database variables:
         
     // create MySQL connector
-    const db = mysql.createConnection({
-      host: '',
-      port: '',
-      user: '',
-      password: '',
-      database: ''
-    });
+    const pool = mysql.createPool({
+        host: '',
+        port: '',
+        user: '',
+        password: '',
+        database: '',
+        waitForConnections: true,
+        connectionLimit: 10,
+        queueLimit: 0,      
+     });
 
-4. Create the database table by running the following SQL commands:
+5. Create the database table by running the following SQL commands:
 
    ```sql
    CREATE TABLE inventory (
@@ -90,7 +93,7 @@ cd book-inventory-management
    );
    ```
 
-5. Start the backend server:
+6. Start the backend server:
 
    ```bash
    npm start
@@ -161,6 +164,7 @@ Exports the inventory in Json/CSV format.
 book-inventory-management
 ├── backend
 │   ├── server.js
+│   ├── db.js
 │   └── package.json
 ├── frontend
 │   ├── public
